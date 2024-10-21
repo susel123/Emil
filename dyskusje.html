@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dyskusje - Forum o Emil</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function addPost() {
+            const postContent = document.getElementById('postContent').value;
+            if (postContent.trim() === '') {
+                alert('Nie możesz dodać pustego posta!');
+                return;
+            }
+            
+            const postsContainer = document.getElementById('postsContainer');
+            const newPost = document.createElement('div');
+            newPost.className = 'post';
+            newPost.innerHTML = `<p>${postContent}</p><p class="post-date">${new Date().toLocaleString()}</p>`;
+            postsContainer.prepend(newPost);
+
+            // Clear the textarea
+            document.getElementById('postContent').value = '';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Dyskusje o Emilu</h1>
+        <p>Tu możesz wyzywać Emila online. ,')</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Strona główna</a></li>
+            <li><a href="o_emilu.html">O Emilu</a></li>
+            <li><a href="dyskusje.html">Dyskusje</a></li>
+            <li><a href="pytania.html">Pytania i odpowiedzi</a></li>
+            <li><a href="nowosci.html">Nowości</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+            <li><a href="wydarzenia.html">Wydarzenia</a></li>
+            <li><a href="opinie.html">Opinie i recenzje</a></li>
+            <li><a href="pomoc.html">Pomoc i wsparcie</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <div class="forum-section">
+            <h2>Dodaj nowy post</h2>
+            <textarea id="postContent" rows="4" placeholder="Napisz swój post..."></textarea>
+            <button onclick="addPost()">Dodaj post</button>
+        </div>
+
+        <div class="forum-section">
+            <h2>Posty</h2>
+            <div id="postsContainer">
+                <!-- Tutaj będą wyświetlane posty -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Forum o Emil. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+</body>
+</html>

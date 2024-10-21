@@ -1,0 +1,119 @@
+/* Globalne style */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #007BFF;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background: #333;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+.forum-section {
+    background: #fff;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #007BFF;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    resize: none;
+}
+
+button {
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Style dla postów */
+.post {
+    background-color: #e7f3fe;
+    border-left: 5px solid #2196F3;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.post-date {
+    font-size: 0.8rem;
+    color: gray;
+}
+
+/* Styl dla sekcji biografii */
+.biography-content {
+    display: flex;
+    align-items: center; /* Wyrównanie w pionie */
+}
+
+.biography-text {
+    flex: 1; /* Pozwól, aby tekst zajmował pozostałą przestrzeń */
+    margin-right: 20px; /* Odstęp między tekstem a obrazem */
+}
+
+.biography-image {
+    flex-shrink: 0; /* Zapobiega zmniejszaniu rozmiaru obrazu */
+}
+
+.uploaded-image {
+    max-width: 150px; /* Maksymalna szerokość obrazka */
+    height: auto; /* Zachowaj proporcje obrazka */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style dla przesyłanych zdjęć */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #007BFF;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
